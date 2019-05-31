@@ -49,6 +49,14 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: "Projects page",
+        welcome: "Welcome to our projects page",
+        content: "List of the projects"
+    })
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: "Unable to handle request"
